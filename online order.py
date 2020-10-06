@@ -12,11 +12,10 @@ count=Entry()
 count.grid(row=1,column=1)
 def check():
     s=Product.get()
-    b =count.get()
+    b=count.get()
     f=open("product details.txt","r")
     for i in f:
         if(i.split(" ")[0]==s and b<=i.split(" ")[1]):
-            print(s)
             messagebox.showinfo("check","your product is available for purchase")
             break
     else:
